@@ -217,6 +217,7 @@
                 showStr = [self whenSureShowResult];
                 type_saved = OtherType;
                 string_firstNum = [NSMutableString stringWithFormat:@"%@",showStr];
+                string_secondNum = [NSMutableString stringWithFormat:@"0"];
             }
             
             break;
