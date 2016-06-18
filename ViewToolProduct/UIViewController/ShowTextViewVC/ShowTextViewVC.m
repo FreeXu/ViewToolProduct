@@ -7,6 +7,7 @@
 //
 
 #import "ShowTextViewVC.h"
+#import "ExpandTextView.h"
 
 @interface ShowTextViewVC ()
 
@@ -16,22 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    ExpandTextView *expandTextView  = [[ExpandTextView alloc] initWithFrame:CGRectMake(50, 80, 100, 180)];
+    expandTextView.font = [UIFont systemFontOfSize:14.0];
+    expandTextView.limitCount = 100;
+    expandTextView.placeholderString = @"请输入";
+    [self.view addSubview:expandTextView];
+    expandTextView.text = @"ddd电话是多少大世界的大声说出输出是出口市场爱打架的话";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

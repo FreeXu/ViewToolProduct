@@ -8,11 +8,13 @@
 
 #import "HomeViewController.h"
 #import "CalculatorViewController.h"
+#import "ShowTextViewVC.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     CGFloat view_width;
     CGFloat view_height;
+    NSArray *array_list;
 }
 @end
 
@@ -31,6 +33,7 @@
     //数据初始化
     view_width  = CGRectGetWidth(self.view.frame);
     view_height = CGRectGetHeight(self.view.frame);
+    array_list = [NSArray arrayWithObjects:@"计算器", @"textView扩展", nil];
     
     //界面布局
     UITableView *tableView_list = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, view_width, view_height)];
@@ -43,7 +46,7 @@
 
 #pragma mark - UITableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return array_list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,18 +54,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        
-        UIImageView *lineImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 49.5, view_width, 0.5)];
-        lineImgView.backgroundColor = [UIColor lightGrayColor];
-        //[cell addSubview:lineImgView];
     }
-    
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"计算器";
-    }
-    else if (indexPath.row == 1) {
-        //cell.textLabel.text = @"生成二维码";
-    }
+    cell.textLabel.text = array_list[indexPath.row];
     
     return cell;
 }
@@ -80,7 +73,8 @@
         [self.navigationController pushViewController:calculatorVC animated:YES];
     }
     else if (indexPath.row == 1) {
-        
+        ShowTextViewVC *showTVVC = [[ShowTextViewVC alloc] init];
+        [self.navigationController pushViewController:showTVVC animated:YES];
     }
 }
 

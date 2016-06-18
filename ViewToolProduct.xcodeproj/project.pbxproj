@@ -16,6 +16,8 @@
 		A027B47C1BEAE6F2007EE0D9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A027B47B1BEAE6F2007EE0D9 /* HomeViewController.m */; };
 		A070C1151BEAE8A100C52EF5 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A070C1141BEAE8A100C52EF5 /* CalculatorViewController.m */; };
 		A070C11B1BEAECE600C52EF5 /* CalculatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A070C11A1BEAECE600C52EF5 /* CalculatorCell.m */; };
+		B04EEB1C1D14F5960042E1DC /* ExpandTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B04EEB1B1D14F5960042E1DC /* ExpandTextView.m */; };
+		B04EEB1F1D14F5B50042E1DC /* ShowTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B04EEB1E1D14F5B50042E1DC /* ShowTextViewVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		A070C1171BEAEB7500C52EF5 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		A070C1191BEAECE600C52EF5 /* CalculatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorCell.h; sourceTree = "<group>"; };
 		A070C11A1BEAECE600C52EF5 /* CalculatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorCell.m; sourceTree = "<group>"; };
+		B04EEB1A1D14F5960042E1DC /* ExpandTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandTextView.h; sourceTree = "<group>"; };
+		B04EEB1B1D14F5960042E1DC /* ExpandTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandTextView.m; sourceTree = "<group>"; };
+		B04EEB1D1D14F5B40042E1DC /* ShowTextViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextViewVC.h; sourceTree = "<group>"; };
+		B04EEB1E1D14F5B50042E1DC /* ShowTextViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextViewVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 			children = (
 				A027B47A1BEAE6F2007EE0D9 /* HomeViewController.h */,
 				A027B47B1BEAE6F2007EE0D9 /* HomeViewController.m */,
+				B04EEB181D14F5960042E1DC /* ShowTextViewVC */,
 				A070C1121BEAE87100C52EF5 /* CalculatorViewController */,
 			);
 			path = UIViewController;
@@ -179,6 +186,25 @@
 				A070C11A1BEAECE600C52EF5 /* CalculatorCell.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		B04EEB181D14F5960042E1DC /* ShowTextViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				B04EEB1D1D14F5B40042E1DC /* ShowTextViewVC.h */,
+				B04EEB1E1D14F5B50042E1DC /* ShowTextViewVC.m */,
+				B04EEB191D14F5960042E1DC /* TextViewExtend */,
+			);
+			path = ShowTextViewVC;
+			sourceTree = "<group>";
+		};
+		B04EEB191D14F5960042E1DC /* TextViewExtend */ = {
+			isa = PBXGroup;
+			children = (
+				B04EEB1A1D14F5960042E1DC /* ExpandTextView.h */,
+				B04EEB1B1D14F5960042E1DC /* ExpandTextView.m */,
+			);
+			path = TextViewExtend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +274,7 @@
 				TargetAttributes = {
 					A027B4421BEAE6B0007EE0D9 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4L96FSF59R;
+						DevelopmentTeam = EVQBS5VXGD;
 					};
 					A027B45B1BEAE6B0007EE0D9 = {
 						CreatedOnToolsVersion = 7.1;
@@ -316,6 +342,8 @@
 				A027B44B1BEAE6B0007EE0D9 /* AppDelegate.m in Sources */,
 				A027B4481BEAE6B0007EE0D9 /* main.m in Sources */,
 				A070C1151BEAE8A100C52EF5 /* CalculatorViewController.m in Sources */,
+				B04EEB1F1D14F5B50042E1DC /* ShowTextViewVC.m in Sources */,
+				B04EEB1C1D14F5960042E1DC /* ExpandTextView.m in Sources */,
 				A070C11B1BEAECE600C52EF5 /* CalculatorCell.m in Sources */,
 				A027B47C1BEAE6F2007EE0D9 /* HomeViewController.m in Sources */,
 			);
@@ -448,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ViewToolProduct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.1Carda.ViewToolProduct;
@@ -459,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ViewToolProduct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.1Carda.ViewToolProduct;
